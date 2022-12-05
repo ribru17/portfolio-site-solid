@@ -1,0 +1,47 @@
+#aboutMeCont {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.aboutMe {
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 25%;
+    min-width: 300px;
+    text-align: left;
+}
+
+.aboutMe p {
+    font-size: 1.5em;
+}
+
+.aboutMe h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    #aboutMeCont {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #aboutMeDivider {
+        display: none;
+    }
+
+    .aboutMe {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    .aboutMe p {
+        font-size: 1.25em;
+    }
+
+    .aboutMe h2 {
+        font-size: 1.75em;
+    }
+}

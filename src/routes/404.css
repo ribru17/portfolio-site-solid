@@ -1,0 +1,82 @@
+pre {
+    font-size: large;
+    margin: 0;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.code-stringLiteral {
+    color: #CE9178;
+}
+
+.code-identifier {
+    color: #569CD6;
+}
+
+.code-property {
+    color: #9CDCFE;
+}
+
+.code-comment {
+    color: #7CA668;
+}
+
+.codeSnippet {
+    padding: 3em;
+    background-color: #222;
+    margin: 2em;
+    border-radius: 8px;
+    font-size: large;
+    text-align: left;
+    counter-reset: line;
+}
+
+@media (max-width: 800px) {
+    .codeSnippet {
+        width: 350px;
+        box-sizing: border-box;
+    }
+
+    pre {
+        text-indent: -3ch;
+        padding-left: 3ch;
+    }
+}
+
+.cursorLine::after {
+    content: " ";
+    animation: blinkTextCursorBar 1s steps(1) infinite normal both;
+}
+
+@keyframes blinkTextCursorBar {
+    0% { content: " "; }
+    50% { content: "|"; }
+}
+
+.codeSnippet header {
+    color: gray;
+    font-family: monospace;
+    font-size: x-large;
+    margin-bottom: 1em;
+}
+
+.codeSnippet pre::before {
+    counter-increment: line;
+    content: counter(line);
+    margin-right: 1ch;
+    padding-right: 1ch;
+    border-right: 1px solid white;
+}
+
+#notFoundHomeLink {
+    color: white;
+    transition: all 0.3s;
+    box-shadow: 0 2px white;
+    font-size: x-large;
+}
+
+#notFoundHomeLink:hover {
+    color: goldenrod;
+    box-shadow: 0 0px white;
+}
