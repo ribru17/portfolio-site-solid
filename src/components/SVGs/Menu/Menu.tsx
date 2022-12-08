@@ -1,21 +1,22 @@
-import { CSSOptions } from 'vite'
+import { JSX } from 'solid-js'
 import './menu.css'
 
-interface Props extends CSSOptions {
+interface Props extends JSX.CSSProperties {
     id?: string,
     onClick?(): any,
     open: boolean,
+    ref: SVGSVGElement | undefined
 }
 
 // const Menu = React.forwardRef((props: Props, ref: React.ForwardedRef<SVGSVGElement>) => {
 export default function Menu(props: Props) {
-
-    const {id, onClick, ...styles} = props
+    const {id, onClick, ref, ...styles} = props
 
     return (
         <svg viewBox="0 0 100 80" height={30} width={30}
         style={{...styles}}
         id={id || ''}
+        ref={ref}
         class={props.open ? 'close' : ''}
         onClick={() => {
             onClick?.()

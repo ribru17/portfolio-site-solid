@@ -1,5 +1,5 @@
 // @refresh reload
-import { Suspense } from "solid-js";
+import { Suspense, createSignal, onMount, onCleanup } from "solid-js";
 import {
   A,
   Body,
@@ -12,9 +12,36 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import DropDown from "./components/DropDown/DropDown";
+import Menu from "./components/SVGs/Menu/Menu";
 import "./root.css";
 
 export default function Root() {
+
+  const [isOpen, setIsOpen] = createSignal(true)
+
+  let dropDownRef: HTMLDivElement | undefined = undefined
+  let svgRef: SVGSVGElement | undefined = undefined
+
+  function toggleDropDown() {
+    setIsOpen(prev => !prev)
+    // setIsOpen(true)
+  }
+
+  function handleClickOutside(e: MouseEvent) {
+    if (dropDownRef && !dropDownRef.contains(e.target as Node) && svgRef && !svgRef.contains(e.target as Node)) {
+      setIsOpen(false)
+    }
+  }
+
+  onMount(() => {
+    document.addEventListener('mousedown', handleClickOutside)
+  })
+
+  onCleanup(() => {
+    document.removeEventListener('mousedown', handleClickOutside)
+  })
+
   return (
     <Html lang="en">
       <Head>
@@ -32,7 +59,9 @@ export default function Root() {
                 <A href="/projects">Projects</A>
                 <A href="/contact">Contact</A>
               </div>
+              <Menu ref={svgRef} open={isOpen()} id="menuSvg" onClick={toggleDropDown} fill="white" />
             </div>
+            <DropDown showing={isOpen()} ref={dropDownRef} />
             <div id="mainContainer">
               <Routes>
                 <FileRoutes />
