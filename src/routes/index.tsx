@@ -1,5 +1,6 @@
 import { createSignal, onMount, onCleanup } from "solid-js";
-import { Scene, PerspectiveCamera, WebGLRenderer, BoxGeometry, TorusGeometry, MeshPhongMaterial, Mesh, MathUtils, AmbientLight, SpotLight, PointLight } from "three"
+// import { Scene, PerspectiveCamera, WebGLRenderer, BoxGeometry, TorusGeometry, MeshPhongMaterial, Mesh, AmbientLight, SpotLight, PointLight } from "three"
+import { WebGLRenderer, Scene, PerspectiveCamera, Mesh, lerp, AmbientLight, BoxGeometry, TorusGeometry, SpotLight, PointLight, MeshPhongMaterial } from "../utils/three"
 import Experience from "./experience";
 import Projects from "./projects";
 import Contact from "./contact";
@@ -91,8 +92,8 @@ export default function Home() {
     frame = requestAnimationFrame(loop)
 
     cube.rotation.x += 0.01 * ROTATION_FACTOR
-    cube.position.y = MathUtils.lerp(-2.5, 0.5, scrollPercent())
-    cube.position.z = MathUtils.lerp(6, 1, scrollPercent())
+    cube.position.y = lerp(-2.5, 0.5, scrollPercent())
+    cube.position.z = lerp(6, 1, scrollPercent())
 
     torusFive.rotation.y += 0.008 * ROTATION_FACTOR
     torusFive.rotation.z += 0.01 * ROTATION_FACTOR
@@ -101,12 +102,12 @@ export default function Home() {
     torusThree.rotation.y += 0.008 * ROTATION_FACTOR
     torusThree.rotation.z += 0.01 * ROTATION_FACTOR
 
-    torusFive.position.y = MathUtils.lerp(0.25, 2, scrollPercent())
-    torusFive.position.z = MathUtils.lerp(0, 5, scrollPercent())
-    torusFour.position.y = MathUtils.lerp(0.25, 2, scrollPercent())
-    torusFour.position.z = MathUtils.lerp(0, 5, scrollPercent())
-    torusThree.position.y = MathUtils.lerp(0.25, 2, scrollPercent())
-    torusThree.position.z = MathUtils.lerp(0, 5, scrollPercent())
+    torusFive.position.y = lerp(0.25, 2, scrollPercent())
+    torusFive.position.z = lerp(0, 5, scrollPercent())
+    torusFour.position.y = lerp(0.25, 2, scrollPercent())
+    torusFour.position.z = lerp(0, 5, scrollPercent())
+    torusThree.position.y = lerp(0.25, 2, scrollPercent())
+    torusThree.position.z = lerp(0, 5, scrollPercent())
 
     renderer.render(scene, camera)
   })
