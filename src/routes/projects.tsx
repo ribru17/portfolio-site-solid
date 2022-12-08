@@ -1,4 +1,4 @@
-import { onMount, createSignal } from "solid-js"
+import { onMount, createSignal, onCleanup } from "solid-js"
 import Github from "~/components/SVGs/Github/Github"
 import WurdGIF from '~/assets/wurdpreviewcropped.gif'
 import Westwordle from '~/assets/westwordle.jpg'
@@ -15,27 +15,26 @@ export default function Projects(props: PageProps) {
     const [active, setActive] = createSignal(false)
 
     let mainRef: HTMLElement | undefined = undefined
+    
+    function handleScroll() {
+        let windowHeight = window.innerHeight
+
+        let elementTop = mainRef?.getBoundingClientRect().top
+
+        let elementVisible = window.innerHeight / 8
+
+        if (elementTop && elementTop < windowHeight - elementVisible) {
+            mainRef?.classList.add("active")
+        }
+    }
 
     onMount(() => {
-        // if (!props.delayActivation) {
-        //     setTimeout(() => {
-        //         setActive(true)
-        //     }, 0)
-        // }
-        function handleScroll() {
-            let windowHeight = window.innerHeight
-
-            let elementTop = mainRef?.getBoundingClientRect().top
-
-            let elementVisible = window.innerHeight / 8
-
-            if (elementTop && elementTop < windowHeight - elementVisible) {
-                mainRef?.classList.add("active")
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll)
         handleScroll()
+        window.addEventListener('scroll', handleScroll)
+    })
+
+    onCleanup(() => {
+        window.removeEventListener('scroll', handleScroll)
     })
 
     return (

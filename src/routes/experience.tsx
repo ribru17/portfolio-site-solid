@@ -1,4 +1,4 @@
-import { createSignal, onMount } from "solid-js";
+import { createSignal, onMount, onCleanup } from "solid-js";
 import "./experience.css"
 
 interface PageProps {
@@ -10,29 +10,26 @@ export default function Experience(props: PageProps) {
     const [active, setActive] = createSignal(false)
 
     let mainRef: HTMLElement | undefined = undefined
+    
+    function handleScroll() {
+        let windowHeight = window.innerHeight
+
+        let elementTop = mainRef?.getBoundingClientRect().top
+
+        let elementVisible = window.innerHeight / 8
+
+        if (elementTop && elementTop < windowHeight - elementVisible) {
+            mainRef?.classList.add("active")
+        }
+    }
 
     onMount(() => {
-        // if (!props.delayActivation) {
-        //     setTimeout(() => {
-        //         setActive(true)
-        //     }, 0)
-        // }
-        // else {
-            function handleScroll() {
-                let windowHeight = window.innerHeight
+        handleScroll()
+        window.addEventListener('scroll', handleScroll)
+    })
 
-                let elementTop = mainRef?.getBoundingClientRect().top
-
-                let elementVisible = window.innerHeight / 8
-
-                if (elementTop && elementTop < windowHeight - elementVisible) {
-                    mainRef?.classList.add("active")
-                }
-            }
-
-            window.addEventListener('scroll', handleScroll)
-            handleScroll()
-        // }
+    onCleanup(() => {
+        window.removeEventListener('scroll', handleScroll)
     })
 
     return (

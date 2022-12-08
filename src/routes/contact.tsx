@@ -1,4 +1,4 @@
-import { createSignal, JSX, onMount } from "solid-js";
+import { createSignal, JSX, onCleanup, onMount } from "solid-js";
 import Github from "~/components/SVGs/Github/Github";
 import LinkedIn from "~/components/SVGs/LinkedIn/LinkedIn";
 import CoolButton from "~/components/CoolButton/CoolButton";
@@ -23,26 +23,25 @@ export default function Contact(props: PageProps) {
 
     let mainRef: HTMLElement | undefined = undefined
 
-    onMount(() => {
-        // if (!props.delayActivation) {
-        //     setTimeout(() => {
-        //         setActive(true)
-        //     }, 0)
-        // }
-        function handleScroll() {
-            let windowHeight = window.innerHeight
+    function handleScroll() {
+        let windowHeight = window.innerHeight
 
-            let elementTop = mainRef?.getBoundingClientRect().top
+        let elementTop = mainRef?.getBoundingClientRect().top
 
-            let elementVisible = window.innerHeight / 8
+        let elementVisible = window.innerHeight / 8
 
-            if (elementTop && elementTop < windowHeight - elementVisible) {
-                mainRef?.classList.add("active")
-            }
+        if (elementTop && elementTop < windowHeight - elementVisible) {
+            mainRef?.classList.add("active")
         }
+    }
 
-        window.addEventListener('scroll', handleScroll)
+    onMount(() => {
         handleScroll()
+        window.addEventListener('scroll', handleScroll)
+    })
+
+    onCleanup(() => {
+        window.removeEventListener('scroll', handleScroll)
     })
 
     const sendMail: JSX.EventHandlerUnion<HTMLFormElement, Event & { submitter: HTMLElement; }> = async (e) => {

@@ -1,3 +1,11 @@
+canvas {
+    top: 0;
+    left: 0;
+    position: fixed;
+    min-height: 900px;
+    z-index: -99;
+}
+
 #aboutMeCont {
     display: flex;
     justify-content: center;
