@@ -7,3 +7,4 @@
 * Favicon
 * Test Lighthouse performance metric on built, production version
 * Double check that ThreeJS is implemented in the idiomatic, most performant way
+* Implement homepage properly (maybe not necessary for Solid?)
