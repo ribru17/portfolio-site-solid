@@ -19,7 +19,7 @@ import "./root.css";
 
 export default function Root() {
 
-  const [isOpen, setIsOpen] = createSignal(true)
+  const [isOpen, setIsOpen] = createSignal(false)
 
   let dropDownRef: HTMLDivElement | undefined = undefined
   let svgRef: SVGSVGElement | undefined = undefined
