@@ -21,3 +21,5 @@ For my purposes the server is just a simple endpoint that e-mails me the content
 * Hosting single page app on Github Pages proved problematic
   * Only worked with hacky solution that 1) rerouted the URL upon loading using a bit of Javascript, and 2) added a custom `homepage` property in the `package.json`
   * Fixed this by switching frontend hosting to Vercel
+* Custom SolidJS `404` page not recognized by Vercel, served Vercel's default error page
+  * Had to reroute the `404` page back to `index.html` using `vercel.json` where the custom `404` was properly displayed
