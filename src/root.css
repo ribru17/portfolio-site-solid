@@ -133,6 +133,7 @@ main.active {
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 1;
   top: 0;
 }
