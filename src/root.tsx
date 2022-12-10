@@ -47,30 +47,31 @@ export default function Root() {
       <Head>
         <Title>Riley Bruins - Full Stack Developer</Title>
         <Meta charset="utf-8" />
+        <Link rel="icon" href="https://rb-portfolio-site.vercel.app/favicon.ico" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta name="theme-color" content="#000000" />
         <Meta
           name="description"
           content="Web portfolio of Riley Bruins"
         />
-        <Link rel="apple-touch-icon" href="logo192.png" />
+        <Link rel="apple-touch-icon" href="https://rb-portfolio-site.vercel.app/logo192.png" />
         {/* SOCIAL MEDIA DESCRIPTORS, MOSTLY FOR LINKEDIN
         Facebook Meta Tags
         <Meta property="og:url" content="https://ribru17.github.io/portfolio-site/" /> */}
-        {/* <Meta property="og:url" content="/" /> */}
+        <Meta property="og:url" content="https://rb-portfolio-site.vercel.app/" />
         <Meta property="og:type" content="website" />
         <Meta property="og:title" content="Riley Bruins - Full Stack Developer" />
         <Meta property="og:description" content="Web portfolio of Riley Bruins" />
-        <Meta property="og:image" content="logoog.png" />
+        <Meta property="og:image" content="https://rb-portfolio-site.vercel.app/logoog.png" />
 
         {/* Twitter Meta Tags */}
         <Meta name="twitter:card" content="summary_large_image" />
         <Meta property="twitter:domain" content="ribru17.github.io" />
         {/* <Meta property="twitter:url" content="https://ribru17.github.io/portfolio-site/" /> */}
-        {/* <Meta property="twitter:url" content="/" /> */}
+        <Meta property="twitter:url" content="https://rb-portfolio-site.vercel.app/" />
         <Meta name="twitter:title" content="Riley Bruins - Full Stack Developer" />
         <Meta name="twitter:description" content="Web portfolio of Riley Bruins" />
-        <Meta name="twitter:image" content="logoog.png" />
+        <Meta name="twitter:image" content="https://rb-portfolio-site.vercel.app/logoog.png" />
         {/* END OF SOCIAL MEDIA DESCRIPTORS */}
       </Head>
       <Body>
