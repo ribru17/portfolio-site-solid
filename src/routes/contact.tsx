@@ -31,7 +31,8 @@ export default function Contact(props: PageProps) {
         let elementVisible = window.innerHeight / 8
 
         if (elementTop && elementTop < windowHeight - elementVisible) {
-            mainRef?.classList.add("active")
+            // mainRef?.classList.add("active")
+            setActive(true)
         }
     }
 

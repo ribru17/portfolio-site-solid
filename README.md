@@ -6,5 +6,4 @@
 * ~~Add SEO~~
 * ~~Favicon~~
 * ~~Test Lighthouse performance metric on built, production version~~
-* Implement homepage properly (maybe not necessary for Solid?)
-* Add dropdown for mobile
+* ~~Add dropdown for mobile~~

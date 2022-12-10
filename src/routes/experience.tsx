@@ -19,7 +19,8 @@ export default function Experience(props: PageProps) {
         let elementVisible = window.innerHeight / 8
 
         if (elementTop && elementTop < windowHeight - elementVisible) {
-            mainRef?.classList.add("active")
+            // mainRef?.classList.add("active")
+            setActive(true)
         }
     }
 
@@ -58,7 +59,7 @@ export default function Experience(props: PageProps) {
                             <p id="experienceText">
                                 I mostly use Express with Node for my backends and favor React as my frontend
                                 framework. I even built this website using React and Typescript!
-                                You can view this site's source code <a class="inlineLink" target="_blank" rel="noreferrer" href="https://github.com/ribru17/portfolio-site">here</a> or
+                                You can <a class="inlineLink" target="_blank" rel="noreferrer" href="https://github.com/ribru17/portfolio-site">view this site's source code</a> or
                                 take a look at some of my skills below!
                             </p>
                         </div>

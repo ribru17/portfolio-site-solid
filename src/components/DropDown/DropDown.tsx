@@ -34,8 +34,6 @@ export default function DropDown(props: DropDownType) {
                 setActivePage([false, false, false, true])
                 break
         }
-        console.log(location.pathname)
-        console.log(activePage())
     })
 
     return (
