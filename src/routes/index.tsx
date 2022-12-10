@@ -1,6 +1,6 @@
 import { createSignal, onMount, onCleanup } from "solid-js";
 // import { Scene, PerspectiveCamera, WebGLRenderer, BoxGeometry, TorusGeometry, MeshPhongMaterial, Mesh, AmbientLight, SpotLight, PointLight } from "three"
-import { WebGLRenderer, Scene, PerspectiveCamera, Mesh, lerp, AmbientLight, BoxGeometry, TorusGeometry, SpotLight, PointLight, MeshPhongMaterial } from "../utils/three"
+import { WebGLRenderer, Scene, PerspectiveCamera, Mesh, lerp, AmbientLight, BoxGeometry, TorusGeometry, SpotLight, PointLight, MeshPhongMaterial, Clock } from "../utils/three"
 import Experience from "./experience";
 import Projects from "./projects";
 import Contact from "./contact";
@@ -10,6 +10,7 @@ export default function Home() {
 
   const [subHeaderWidth, setSubheaderWidth] = createSignal('0%')
   const [scrollPercent, setScrollPercent] = createSignal(0)
+  const clock = new Clock()
 
   function handleScroll() {
     setScrollPercent(Math.min(window.scrollY / (document.body.offsetHeight - window.innerHeight), 1))
@@ -23,7 +24,7 @@ export default function Home() {
     }, 0)
   })
 
-  const ROTATION_FACTOR = 0.4
+  // const ROTATION_FACTOR = 0.4
 
   const scene = new Scene()
   const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -90,6 +91,8 @@ export default function Home() {
 
   let frame = requestAnimationFrame(function loop() {
     frame = requestAnimationFrame(loop)
+
+    const ROTATION_FACTOR = clock.getDelta() * 20
 
     cube.rotation.x += 0.01 * ROTATION_FACTOR
     cube.position.y = lerp(-2.5, 0.5, scrollPercent())

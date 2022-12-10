@@ -135,7 +135,7 @@ export { TorusGeometry } from 'three/src/geometries/TorusGeometry.js'
 // }
 // export { Layers } from 'three/src/core/Layers.js'
 //export { EventDispatcher } from 'three/src/core/EventDispatcher.js'
-// export { Clock } from 'three/src/core/Clock.js'
+export { Clock } from 'three/src/core/Clock.js'
 //export { QuaternionLinearInterpolant } from 'three/src/math/interpolants/QuaternionLinearInterpolant.js'
 //export { LinearInterpolant } from 'three/src/math/interpolants/LinearInterpolant.js'
 //export { DiscreteInterpolant } from 'three/src/math/interpolants/DiscreteInterpolant.js'
