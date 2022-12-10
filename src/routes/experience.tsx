@@ -19,7 +19,6 @@ export default function Experience(props: PageProps) {
         let elementVisible = window.innerHeight / 8
 
         if (elementTop && elementTop < windowHeight - elementVisible) {
-            // mainRef?.classList.add("active")
             setActive(true)
         }
     }

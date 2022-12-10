@@ -12,3 +12,12 @@ the server as it is hosted separately on Render.com.
 
 The Express server is hosted on Render.com and its repository can be found [here.](https://github.com/ribru17/portfolio-site-backend)
 For my purposes the server is just a simple endpoint that e-mails me the content of the `Contact` page form.
+
+## Problems I Encountered and How I Overcame Them
+* Slow initial load, performance on mobile
+  * Greatly reduced initial load by manually exporting only individual packages I needed from Three.js source code (as of writing they do not support partial imports and have a bundle size of over `400 KiB`)
+  * Switched frameworks from React to Solid
+  * Ended up reducing mobile blocking time from `440ms` to `150ms` and mobile TTI from `3.3s` to `2.2s`
+* Hosting single page app on Github Pages proved problematic
+  * Only worked with hacky solution that 1) rerouted the URL upon loading using a bit of Javascript, and 2) added a custom `homepage` property in the `package.json`
+  * Fixed this by switching frontend hosting to Vercel
