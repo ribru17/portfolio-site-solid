@@ -56,8 +56,7 @@ export default function Root() {
         />
         <Link rel="apple-touch-icon" href="https://rb-portfolio-site.vercel.app/logo192.png" />
         {/* SOCIAL MEDIA DESCRIPTORS, MOSTLY FOR LINKEDIN
-        Facebook Meta Tags
-        <Meta property="og:url" content="https://ribru17.github.io/portfolio-site/" /> */}
+        Facebook Meta Tags*/}
         <Meta property="og:url" content="https://rb-portfolio-site.vercel.app/" />
         <Meta property="og:type" content="website" />
         <Meta property="og:title" content="Riley Bruins - Full Stack Developer" />
@@ -67,7 +66,6 @@ export default function Root() {
         {/* Twitter Meta Tags */}
         <Meta name="twitter:card" content="summary_large_image" />
         <Meta property="twitter:domain" content="ribru17.github.io" />
-        {/* <Meta property="twitter:url" content="https://ribru17.github.io/portfolio-site/" /> */}
         <Meta property="twitter:url" content="https://rb-portfolio-site.vercel.app/" />
         <Meta name="twitter:title" content="Riley Bruins - Full Stack Developer" />
         <Meta name="twitter:description" content="Web portfolio of Riley Bruins" />
