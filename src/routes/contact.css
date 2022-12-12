@@ -1,13 +1,14 @@
 input, textarea {
     padding: 5%;
-    border: 2px solid goldenrod;
+    border: 2px solid gold;
+    font-family: "Mabry";
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 10px;
     min-width: 300px;
     resize: none;
     transition: 0.25s;
-    background-color: #555;
+    background-color: black;
     color: white;
     font-size: 1em;
     border-radius: 5px;
@@ -26,43 +27,28 @@ textarea::-webkit-scrollbar-track {
 }
 
 textarea::-webkit-scrollbar-thumb {
-    background-color: transparent;
+    border-radius: 999px;
     border: 6px solid transparent;
     background-clip: padding-box;
-    border-radius: 999px;
 }
 
-textarea:hover::-webkit-scrollbar-thumb {
+textarea::-webkit-scrollbar-thumb:hover {
     background-color: gold;
     border: 6px solid transparent;
     background-clip: padding-box;
 }
 
-textarea:hover::-webkit-scrollbar-thumb:hover {
-    background-color: goldenrod;
-}
-
-textarea:focus-visible::-webkit-scrollbar-thumb {
+/* input:hover, textarea:hover {
     background-color: #222;
-    border: 6px solid transparent;
-    background-clip: padding-box;
-}
-
-textarea:focus-visible::-webkit-scrollbar-thumb:hover {
-    background-color: black;
-}
-
-input:hover, textarea:hover {
-    background-color: #222;
-}
+} */
 
 input::placeholder, textarea::placeholder {
-    color: #aaa;
+    color: blueviolet;
     font-weight: bold;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    color: #aaa;
+    color: blueviolet;
     font-weight: bold;
 }
 
@@ -73,20 +59,17 @@ button {
 
 input:focus-visible, textarea:focus-visible {
     outline: none;
-    background-color: #aaa;
-    color: black;
-    border-radius: 16px;
 }
 
 button.coolButton {
-    background-color: #555;
+    background-color: black;
     min-width: 300px;
     border-radius: 5px;
 }
 
-button.coolButton:hover {
+/* button.coolButton:hover {
     background-color: #222;
-}
+} */
 
 button.coolButton:focus-visible {
     background-color: #222;
@@ -103,28 +86,38 @@ button.coolButton:focus-visible {
 }
 
 #contactInvite {
-    padding: 0;
+    padding: 15px;
     display: flex;
     flex-direction: row;
+    /* flex-direction: column; */
     width: 50%;
     min-width: 300px;
     text-align: left;
+    background-color: #d9ba6c;
+    border-radius: 8px;
+    border: 3px solid black;
+    color: black;
+    box-shadow: 8px 8px 0px black;
 }
 
 #logoCont {
     display: flex;
     flex-direction: column;
+    /* flex-direction: row; */
     align-items: center;
     justify-content: space-evenly;
-    padding-left: 5%;
+    /* justify-content: center; */
+    /* padding-left: 5%; */
+    padding-right: 20px;
 }
 
 #logoCont svg {
-    fill: white;
-    transition: 0.3s;
+    fill: black;
+    transition: 0.25s;
+    /* padding: 0px 8px; */
 }
 
 #logoCont svg:hover {
-    fill: black;
-    filter: drop-shadow(0px 0px 2px goldenrod);
+    fill: blueviolet;
+    /* filter: drop-shadow(0px 0px 2px goldenrod); */
 }

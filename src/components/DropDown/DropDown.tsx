@@ -37,10 +37,7 @@ export default function DropDown(props: DropDownType) {
     })
 
     return (
-        <div ref={props.ref} id="dropDown" style={{
-                "max-width": props.showing ? '150px' : '0%',
-                "border-right": props.showing ? '2px solid darkgoldenrod' : 'none'
-            }}>
+        <div ref={props.ref} id="dropDown" class={props.showing ? "showing" : ""}>
             <A class={activePage()[0] ? "currentPage" : ""} href="/">Home</A>
             <A class={activePage()[1] ? "currentPage" : ""} href="/experience">Experience</A>
             <A class={activePage()[2] ? "currentPage" : ""} href="/projects">Projects</A>

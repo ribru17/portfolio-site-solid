@@ -40,7 +40,7 @@ export default function Projects(props: PageProps) {
     return (
         <main class={active() ? "active" : ""} ref={mainRef}>
             <h1>Projects</h1>
-            <p id="projectSubheader"> an image to show relevant skills.</p>
+            <p id="projectSubheader"> an image to show relevant skills</p>
             <div class="projectDiv">
                 <h2 class='projectTitle'>Westwordle<a class='toSource' rel='noreferrer' target="_blank" href="https://github.com/ribru17/westwordle"><Github /></a></h2>
                     <Card3D photo={Westwordle} aspectRatio='1.5'>
@@ -55,7 +55,7 @@ export default function Projects(props: PageProps) {
                 </div>
             </div>
             <div class="projectDiv">
-                <h2 class='projectTitle'>Wurd (Text Editor App)<a class='toSource' rel='noreferrer' target="_blank" href="https://github.com/ribru17/text-editor-app"><Github /></a></h2>
+                <h2 class='projectTitle'>Wurd<a class='toSource' rel='noreferrer' target="_blank" href="https://github.com/ribru17/text-editor-app"><Github /></a></h2>
                 <Card3D photo={WurdGIF} aspectRatio='1.8'>
                     <div class="card-bar card-bar2"><span>C++</span></div>
                     <div class="card-bar card-bar2"><span>OOP</span></div>

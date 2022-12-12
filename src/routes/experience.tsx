@@ -36,12 +36,12 @@ export default function Experience(props: PageProps) {
         <main class={active() ? "active" : ""} ref={mainRef}>
             <h1>Experience</h1>
             <div class="largeBlock" id="experienceBody">
-                <h2>Employment Experience</h2>
+                <h2 style={{"margin-top": 0}}>Employment Experience</h2>
                 <div class="flex">
                     <div class="workCont">
                         <div class="workInfoCont">
                             <h3>AI Model Trainer at Surge AI</h3>
-                            <h3>June 2022 - August 2022</h3>
+                            <h3 class="timeWorked">June 2022 - August 2022</h3>
                         </div>
                         <p class="workText">
                             Here I worked part-time with a team of over 80 people to write helpful and

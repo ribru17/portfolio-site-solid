@@ -10,8 +10,8 @@
   justify-content: center;
   flex-direction: column;
   transform-style: preserve-3d;
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
-  border: 2px solid darkgoldenrod;
+  /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
+  border: 3px solid black;
   box-sizing: content-box;
 }
 .card h2, .card h3, .card P {
@@ -56,11 +56,15 @@
 }
 
 .background:hover .card {
-  box-shadow: 0px 0px 5px 2px darkgoldenrod;
+  /* box-shadow: 0px 0px 5px 2px darkgoldenrod; */
+  /* box-shadow: 8px 8px 0px black, -8px -8px 0px #d9ba6c; */
+  box-shadow: 8px 8px 0px black, -8px -8px 0px blueviolet;
+  /* box-shadow: 8px 8px 0px black, -8px -8px 0px black; */
 }
 .background.details:hover .card {
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.75); */
+  box-shadow: none;
 }
 
 .card .photo:after {
@@ -86,7 +90,8 @@
   margin: 10px;
   width: 25px;
   position: relative;
-  background: linear-gradient(darkgoldenrod, darkgoldenrod, rgba(0, 0, 0, 0));
+  /* background: linear-gradient(darkgoldenrod, darkgoldenrod, rgba(0, 0, 0, 0)); */
+  /* background: linear-gradient(black, rgba(0, 0, 0, 0)); */
 }
 .card .card-bar:after {
   display: block;
@@ -160,7 +165,7 @@
 }
 .details .card {
   transform: rotateX(60deg) translateY(150px) translateZ(100px);
-  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.75); */
 }
 .details .card .chart {
   transform: translateZ(40px) translatey(50px);
@@ -206,8 +211,11 @@
 .details .card .card-bar span {
   opacity: 1;
   transition-delay: 0.3s;
-  color: white;
-  background-color: darkgoldenrod;
+  color: black;
+  /* background-color: darkgoldenrod; */
+  background-color: #d9ba6c;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px black;
   -webkit-font-smoothing: subpixel-antialiased;
   backface-visibility: hidden;
 }
