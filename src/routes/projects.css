@@ -4,7 +4,6 @@
     align-items: center;
     flex-direction: column;
     width: 80%;
-    /* overflow: hidden; */
 }
 
 .projectDiv img {
@@ -58,11 +57,6 @@
     text-align: center;
     vertical-align: middle;
     line-height: 20px;
-    /* width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center; */
-    /* white-space: nowrap; */
 }
 
 .toSource {

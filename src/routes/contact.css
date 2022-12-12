@@ -38,10 +38,6 @@ textarea::-webkit-scrollbar-thumb:hover {
     background-clip: padding-box;
 }
 
-/* input:hover, textarea:hover {
-    background-color: #222;
-} */
-
 input::placeholder, textarea::placeholder {
     color: blueviolet;
     font-weight: bold;
@@ -67,10 +63,6 @@ button.coolButton {
     border-radius: 5px;
 }
 
-/* button.coolButton:hover {
-    background-color: #222;
-} */
-
 button.coolButton:focus-visible {
     background-color: #222;
 }
@@ -89,7 +81,6 @@ button.coolButton:focus-visible {
     padding: 15px;
     display: flex;
     flex-direction: row;
-    /* flex-direction: column; */
     width: 50%;
     min-width: 300px;
     text-align: left;
@@ -103,21 +94,16 @@ button.coolButton:focus-visible {
 #logoCont {
     display: flex;
     flex-direction: column;
-    /* flex-direction: row; */
     align-items: center;
     justify-content: space-evenly;
-    /* justify-content: center; */
-    /* padding-left: 5%; */
     padding-right: 20px;
 }
 
 #logoCont svg {
     fill: black;
     transition: 0.25s;
-    /* padding: 0px 8px; */
 }
 
 #logoCont svg:hover {
     fill: blueviolet;
-    /* filter: drop-shadow(0px 0px 2px goldenrod); */
 }

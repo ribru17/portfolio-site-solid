@@ -1,7 +1,5 @@
 body {
   margin: 0;
-  /* font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: "Brutal";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,21 +15,19 @@ body {
 @font-face {
   font-family: "Brutal";
   src: url('./fonts/Bebas-Regular.ttf')format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Roboto Condensed', sans-serif;
   src: url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+  font-display: swap;
 }
-
-/* @font-face {
-  font-family: "Mabry";
-  src: url('./fonts/Mabry-Pro-Medium.ttf')format("truetype");
-} */
 
 @font-face {
   font-family: "MabryLite";
-  src: url('./fonts/mabry-pro-medium-webfont.woff')format('woff');
+  src: url('./fonts/mabry-pro-medium-webfont.woff2')format('woff2');
+  font-display: swap;
 }
 
 textarea {
@@ -49,13 +45,8 @@ h2 {
 
 p {
   font-size: 1.25em;
-  /* font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif; */
-  /* font-family: "Mabry"; */
   font-family: "MabryLite";
   font-weight: normal;
-  /* letter-spacing: -1px; */
-  /* font-weight: bold; */
 }
 
 code {
@@ -67,12 +58,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-/* .pageDiv {
-  padding-top: 75px;
-  margin-bottom: 100px;
-  width: 100%;
-} */
 
 main {
   display: flex;
@@ -117,8 +102,6 @@ main.active {
   border-bottom: 1px solid white;
   transition: .75s cubic-bezier(0.85,-0.06, 0.88, 0.53);
   max-width: 75%;
-  /* overflow: hidden; */
-  /* white-space: nowrap; */
 }
 
 .largeBlock {
@@ -143,7 +126,6 @@ main.active {
 
 .logo {
   height: 100%;
-  /* filter: saturate(60%); */
   animation: hueShift 10s infinite linear;
 }
 
@@ -167,13 +149,10 @@ main.active {
   width: 100%;
   height: 75px;
   box-sizing: border-box;
-  /* background-color: rgba(0, 0, 0, 0.15); */
   background-color: black;
   position: fixed;
   justify-content: space-between;
   align-items: center;
-  /* backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px); */
   z-index: 1;
   top: 0;
 }
@@ -188,8 +167,6 @@ main.active {
 }
 
 #navBar a:hover {
-  /* text-shadow: 0px 0px 5px goldenrod; */
-  /* box-shadow: 0px -2px 0px white; */
   border-color: white;
   background-color: black;
   outline: none;

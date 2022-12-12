@@ -25,7 +25,6 @@ h2 {
 }
 
 .workInfoCont {
-    /* background-color: #222; */
     background-color: #d9ba6c;
     color: black;
     padding: 16px;
@@ -53,7 +52,6 @@ h2 {
     margin-left: 16px;
     border-radius: 8px;
     text-align: center;
-    /* animation: toWhite 500ms 5s normal both; */
     flex-direction: row;
     animation: colorChange 8s steps(1) 2s infinite normal forwards;
     transition: 0.5s all;

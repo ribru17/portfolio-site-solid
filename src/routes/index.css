@@ -10,6 +10,8 @@ canvas {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    color: black;
+    
 }
 
 .aboutMe {
