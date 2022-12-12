@@ -63,10 +63,6 @@ button.coolButton {
     border-radius: 5px;
 }
 
-button.coolButton:focus-visible {
-    background-color: #222;
-}
-
 #contactForm {
     padding: 5%;
     display: flex;

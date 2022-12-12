@@ -3,7 +3,7 @@ body {
     font-family: "Brutal";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #333;
+  background-color: #426A5A;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,7 +163,7 @@ main.active {
   transition: 0.2s ease;
   font-size: 1.5em;
   outline: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
 #navBar a:hover {

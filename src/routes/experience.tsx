@@ -58,7 +58,7 @@ export default function Experience(props: PageProps) {
                             <p id="experienceText">
                                 I mostly use Express with Node for my backends and favor React as my frontend
                                 framework. This website, however, is built with SolidJS and Typescript!
-                                You can <a class="inlineLink" target="_blank" rel="noreferrer" href="https://github.com/ribru17/portfolio-site-solid">view this site's source code</a> or
+                                Feel free to <a class="inlineLink" target="_blank" rel="noreferrer" href="https://github.com/ribru17/portfolio-site-solid">view this site's source code</a> or
                                 take a look at some of my skills below!
                             </p>
                         </div>

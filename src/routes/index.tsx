@@ -1,5 +1,4 @@
 import { createSignal, onMount, onCleanup } from "solid-js";
-// import { Scene, PerspectiveCamera, WebGLRenderer, BoxGeometry, TorusGeometry, MeshPhongMaterial, Mesh, AmbientLight, SpotLight, PointLight } from "three"
 import { WebGLRenderer, Scene, PerspectiveCamera, Mesh, lerp, AmbientLight, BoxGeometry, TorusGeometry, SpotLight, PointLight, MeshPhongMaterial, Clock } from "../utils/three"
 import Experience from "./experience";
 import Projects from "./projects";
@@ -8,7 +7,6 @@ import "./index.css"
 
 export default function Home() {
 
-  const [subHeaderWidth, setSubheaderWidth] = createSignal('0%')
   const [scrollPercent, setScrollPercent] = createSignal(0)
   const clock = new Clock()
 
@@ -19,17 +17,11 @@ export default function Home() {
   onMount(() => {
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', onResize)
-    setTimeout(() => {
-      setSubheaderWidth('75%')
-    }, 0)
   })
-
-  // const ROTATION_FACTOR = 0.4
 
   const scene = new Scene()
   const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
   const renderer = new WebGLRenderer()
-  // renderer.setClearColor(0xffffff)
   renderer.setClearAlpha(0)
 
   const geometry = new BoxGeometry(1,1,1)
@@ -125,7 +117,6 @@ export default function Home() {
   return (
     <main class="active">
       <h1>Riley Bruins</h1>
-      {/* <h2 style={{"max-width": subHeaderWidth()}} class='subHeader'>Driven and passionate full stack developer.</h2> */}
       <h2 class='subHeader'>Driven and passionate full stack developer.</h2>
       <div id="aboutMeCont">
         <div class='aboutMe'>
@@ -135,7 +126,6 @@ export default function Home() {
             I love programming and I have worked on countless projects, both in teams and by myself.
           </p>
         </div>
-        {/* <div id="aboutMeDivider" style={{"border-right": '1px solid white'}}></div> */}
         <div class='aboutMe'>
           <h2>My Priorities</h2>
           <p>
