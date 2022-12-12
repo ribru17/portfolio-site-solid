@@ -24,9 +24,14 @@ body {
   src: url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 }
 
-@font-face {
+/* @font-face {
   font-family: "Mabry";
   src: url('./fonts/Mabry-Pro-Medium.ttf')format("truetype");
+} */
+
+@font-face {
+  font-family: "MabryLite";
+  src: url('./fonts/mabry-pro-medium-webfont.woff')format('woff');
 }
 
 textarea {
@@ -46,7 +51,8 @@ p {
   font-size: 1.25em;
   /* font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-family: "Mabry";
+  /* font-family: "Mabry"; */
+  font-family: "MabryLite";
   font-weight: normal;
   /* letter-spacing: -1px; */
   /* font-weight: bold; */
