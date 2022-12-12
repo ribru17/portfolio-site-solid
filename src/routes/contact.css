@@ -103,28 +103,38 @@ button.coolButton:focus-visible {
 }
 
 #contactInvite {
-    padding: 0;
+    padding: 15px;
     display: flex;
     flex-direction: row;
+    /* flex-direction: column; */
     width: 50%;
     min-width: 300px;
     text-align: left;
+    background-color: #d9ba6c;
+    border-radius: 8px;
+    border: 3px solid black;
+    color: black;
+    box-shadow: 8px 8px 0px black;
 }
 
 #logoCont {
     display: flex;
     flex-direction: column;
+    /* flex-direction: row; */
     align-items: center;
     justify-content: space-evenly;
-    padding-left: 5%;
+    /* justify-content: center; */
+    /* padding-left: 5%; */
+    padding-right: 20px;
 }
 
 #logoCont svg {
-    fill: white;
-    transition: 0.3s;
+    fill: black;
+    transition: 0.25s;
+    /* padding: 0px 8px; */
 }
 
 #logoCont svg:hover {
-    fill: black;
-    filter: drop-shadow(0px 0px 2px goldenrod);
+    fill: blueviolet;
+    /* filter: drop-shadow(0px 0px 2px goldenrod); */
 }

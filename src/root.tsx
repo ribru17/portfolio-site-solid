@@ -76,7 +76,7 @@ export default function Root() {
         <Suspense>
           <ErrorBoundary>
             <div id="navBar">
-              <A href="/" id="nameLink">Riley Bruins<img class='logo' src='logo192.png' alt='Logo'></img></A>
+              <A href="/" id="nameLink">RILEY BRUINS<img class='logo' src='logo192.png' alt='Logo'></img></A>
               <div id="otherLinks">
                 <A href="/experience">Experience</A>
                 <A href="/projects">Projects</A>

@@ -5,7 +5,7 @@ A web portfolio of myself made by myself to showcase what I can do. Hosted on Ve
 
 ## Running
 
-To run this project clone it and then run `npm install` followed by `npm start` in the cloned directory. This will only run the client - you don't need to worry about
+To run this project clone it and then run `npm install` followed by `npm run dev` in the cloned directory. This will only run the client - you don't need to worry about
 the server as it is hosted separately on Render.com.
 
 ## Server

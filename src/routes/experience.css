@@ -4,7 +4,7 @@ h2 {
 
 .bar {
     background-color: #222;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 20px;
     min-width: 300px;
     width: 60%;
@@ -25,29 +25,45 @@ h2 {
 }
 
 .workInfoCont {
-    background-color: #222;
+    /* background-color: #222; */
+    background-color: #d9ba6c;
+    color: black;
     padding: 16px;
     border-radius: 8px;
     text-align: center;
-    /* margin-right: 30px; */
+    border: 2px solid black;
+    box-shadow: 5px 5px 0px black;
 }
 
 .workText {
     padding: 0;
+    margin-left: 16px;
     vertical-align: middle;
     min-width: 300px;
     width: 40%;
 }
 
+.timeWorked {
+    font-weight: normal;
+}
+
 .typewriterCont {
     background-color: black;
     padding: 50px;
+    margin-left: 16px;
     border-radius: 8px;
     text-align: center;
-    animation: toWhite 500ms 5s normal both;
+    /* animation: toWhite 500ms 5s normal both; */
     flex-direction: row;
     animation: colorChange 8s steps(1) 2s infinite normal forwards;
     transition: 0.5s all;
+    border: 2px solid;
+    border-color: white;
+    box-shadow: 8px 8px 0px white;
+}
+
+.typewriterCont p {
+    letter-spacing: normal;
 }
 
 .typewriterStatic {
@@ -98,8 +114,16 @@ h2 {
 }
 
 @keyframes colorChange {
-    0% { background-color: white; }
-    50% { background-color: black; }
+    0% {
+        background-color: white;
+        border-color: black;
+        box-shadow: 8px 8px 0px black;
+    }
+    50% {
+        background-color: black;
+        border-color: white;
+        box-shadow: -8px -8px 0px white;
+    }
 }
 
 .inlineLink, .inlineLink:visited {
@@ -117,29 +141,28 @@ h2 {
     align-items: center;
     display: flex;
     flex-direction: column;
+    color: blueviolet;
+
+}
+
+#experienceCont > div > div {
+    background-color: gold;
+    border: 3px solid black;
+    padding: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 #experienceCont .max {
-    background-image: linear-gradient(to right, darkgoldenrod, goldenrod);
-    padding: 15px;
-    border-radius: 5px;
-    box-sizing: border-box;
+    width: 100%;
 }
 
 #experienceCont .eighty {
     width: 80%;
-    background-image: linear-gradient(to right, darkgoldenrod, goldenrod);
-    padding: 15px;
-    border-radius: 5px;
-    box-sizing: border-box;
 }
 
 #experienceCont .sixty {
     width: 60%;
-    background-image: linear-gradient(to right, darkgoldenrod, goldenrod);
-    padding: 15px;
-    box-sizing: border-box;
-    border-radius: 5px;
 }
 
 #experienceBody {
@@ -159,6 +182,14 @@ h2 {
 @media (max-width: 800px) {
     .workCont {
         flex-direction: column;
+    }
+    
+    .typewriterCont {
+        margin-left: 0;
+    }
+
+    .workText {
+        margin-left: 0;
     }
 
     .workInfoCont {

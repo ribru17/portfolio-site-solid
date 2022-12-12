@@ -77,14 +77,14 @@ export default function Contact(props: PageProps) {
         <main class={active() ? "active" : ""} ref={mainRef}>
             <h1>Contact</h1>
             <div id="contactInvite">
-                <p>
-                    Check out my linked profiles on the right.
-                    If you have a question or you want to work with me, send me an email below!
-                </p>
                 <div id="logoCont">
                     <a target="_blank" rel="noreferrer" href="https://github.com/ribru17"><Github /></a>
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/riley-bruins/"><LinkedIn /></a>
                 </div>
+                <p>
+                    Check out my linked profiles on the left.
+                    If you have a question or you want to work with me, send me an email below!
+                </p>
             </div>
             <form ref={formRef} onSubmit={sendMail} id='contactForm'>
                 <input autocomplete="off" type="text" placeholder="Your email" name="name" required></input>

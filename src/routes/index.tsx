@@ -125,7 +125,8 @@ export default function Home() {
   return (
     <main class="active">
       <h1>Riley Bruins</h1>
-      <h2 style={{"max-width": subHeaderWidth()}} class='subHeader'>Driven and passionate full stack developer</h2>
+      {/* <h2 style={{"max-width": subHeaderWidth()}} class='subHeader'>Driven and passionate full stack developer.</h2> */}
+      <h2 class='subHeader'>Driven and passionate full stack developer.</h2>
       <div id="aboutMeCont">
         <div class='aboutMe'>
           <h2>About Me</h2>
@@ -134,7 +135,7 @@ export default function Home() {
             I love programming and I have worked on countless projects, both in teams and by myself.
           </p>
         </div>
-        <div id="aboutMeDivider" style={{"border-right": '1px solid white'}}></div>
+        {/* <div id="aboutMeDivider" style={{"border-right": '1px solid white'}}></div> */}
         <div class='aboutMe'>
           <h2>My Priorities</h2>
           <p>
