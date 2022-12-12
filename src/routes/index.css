@@ -46,6 +46,7 @@ canvas {
     .aboutMe {
         margin: 0;
         font-size: 1em;
+        margin-top: 16px;
     }
 
     .aboutMe p {

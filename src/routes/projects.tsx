@@ -55,7 +55,7 @@ export default function Projects(props: PageProps) {
                 </div>
             </div>
             <div class="projectDiv">
-                <h2 class='projectTitle'>Wurd (Text Editor App)<a class='toSource' rel='noreferrer' target="_blank" href="https://github.com/ribru17/text-editor-app"><Github /></a></h2>
+                <h2 class='projectTitle'>Wurd<a class='toSource' rel='noreferrer' target="_blank" href="https://github.com/ribru17/text-editor-app"><Github /></a></h2>
                 <Card3D photo={WurdGIF} aspectRatio='1.8'>
                     <div class="card-bar card-bar2"><span>C++</span></div>
                     <div class="card-bar card-bar2"><span>OOP</span></div>
