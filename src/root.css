@@ -16,7 +16,7 @@ body {
 
 @font-face {
   font-family: "Brutal";
-  src: url('https://rb-portfolio-site.vercel.app/Bebas-Regular.ttf')format("truetype");
+  src: url('./fonts/Bebas-Regular.ttf')format("truetype");
 }
 
 @font-face {
@@ -26,7 +26,7 @@ body {
 
 @font-face {
   font-family: "Mabry";
-  src: url('https://rb-portfolio-site.vercel.app/Mabry-Pro-Medium.ttf')format("truetype");
+  src: url('./fonts/Mabry-Pro-Medium.ttf')format("truetype");
 }
 
 textarea {
