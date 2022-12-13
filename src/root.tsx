@@ -81,7 +81,7 @@ export default function Root() {
                 <A href="/experience">Experience</A>
                 <A href="/projects">Projects</A>
                 <A href="/contact">Contact</A>
-                <A href="/resume.pdf" target="_blank"><span class="resumeLink">Resume</span></A>
+                <A href="https://rb-portfolio-site.vercel.app/resume.pdf" target="_blank"><span class="resumeLink">Resume</span></A>
               </div>
               <Menu ref={svgRef} open={isOpen()} id="menuSvg" onClick={toggleDropDown} fill="white" />
             </div>
