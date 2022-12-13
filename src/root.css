@@ -219,6 +219,13 @@ main.active {
   width: 100%;
 }
 
+.resumeLink {
+  background: -webkit-linear-gradient(right, gold, blueviolet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (max-width: 800px) {
   #otherLinks {
     display: none;

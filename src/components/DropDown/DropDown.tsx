@@ -8,7 +8,6 @@ interface DropDownType {
     ref: HTMLDivElement | undefined
 }
 
-// const DropDown = React.forwardRef((props: DropDownType, ref: React.ForwardedRef<HTMLDivElement>) => {
 export default function DropDown(props: DropDownType) {
 
     const location = useLocation()
@@ -42,6 +41,7 @@ export default function DropDown(props: DropDownType) {
             <A class={activePage()[1] ? "currentPage" : ""} href="/experience">Experience</A>
             <A class={activePage()[2] ? "currentPage" : ""} href="/projects">Projects</A>
             <A class={activePage()[3] ? "currentPage" : ""} href="/contact">Contact</A>
+            <A href="/resume.pdf" target='_blank'>Resume</A>
         </div>
     )
 }

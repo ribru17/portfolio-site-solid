@@ -24,14 +24,10 @@
 }
 
 #dropDown a {
-    /* padding-top: 15%;
-    padding-bottom: 15%; */
     width: 100%;
 }
 
 #dropDown a.currentPage {
-    /* text-shadow: 0px 0px 2px goldenrod; */
-    /* background-color: #333; */
     color: blueviolet;
 }
 
