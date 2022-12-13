@@ -1,11 +1,7 @@
 import { createSignal, onMount, onCleanup } from "solid-js";
 import "./experience.css"
 
-interface PageProps {
-    delayActivation?: boolean
-}
-
-export default function Experience(props: PageProps) {
+export default function Experience() {
 
     const [active, setActive] = createSignal(false)
 

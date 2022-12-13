@@ -134,9 +134,9 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <Experience delayActivation={true} />
-      <Projects delayActivation={true} />
-      <Contact delayActivation={true} />
+      <Experience />
+      <Projects />
+      <Contact />
     </main>
   );
 }

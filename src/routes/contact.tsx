@@ -4,11 +4,7 @@ import LinkedIn from "~/components/SVGs/LinkedIn/LinkedIn";
 import CoolButton from "~/components/CoolButton/CoolButton";
 import "./contact.css"
 
-interface PageProps {
-    delayActivation?: boolean
-}
-
-export default function Contact(props: PageProps) {
+export default function Contact() {
 
     interface ContactForm extends HTMLFormControlsCollection {
         name?: HTMLInputElement,
@@ -47,7 +43,6 @@ export default function Contact(props: PageProps) {
     const sendMail: JSX.EventHandlerUnion<HTMLFormElement, Event & { submitter: HTMLElement; }> = async (e) => {
         e.preventDefault()
         let fields: ContactForm = (e.target as HTMLFormElement).elements
-        // let rootUrl = process.env.NODE_ENV === 'production' ? 'https://rb-portfolio-site.herokuapp.com' : ''
         let rootUrl = 'https://portfolio-backend-dig6.onrender.com'
         let messageName = fields.name?.value || ""
         let messageContent = fields.message?.value || ""

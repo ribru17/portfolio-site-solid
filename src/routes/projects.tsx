@@ -6,11 +6,7 @@ import Chordeographer from '~/assets/chordeographerpreview.jpg'
 import Card3D from "~/components/Card3D/Card3D"
 import "./projects.css"
 
-interface PageProps {
-    delayActivation?: boolean
-}
-
-export default function Projects(props: PageProps) {
+export default function Projects() {
 
     const [active, setActive] = createSignal(false)
 
