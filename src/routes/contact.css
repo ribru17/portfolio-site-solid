@@ -97,7 +97,7 @@ button.coolButton {
 
 #logoCont svg {
     fill: black;
-    transition: 0.25s;
+    transition: 0.15s ease-in-out;
 }
 
 #logoCont svg:hover {

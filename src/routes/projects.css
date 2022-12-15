@@ -69,12 +69,12 @@
 
 .toSource svg {
     fill: white;
-    transition: 0.3s;
+    transition: 0.15s;
 }
 
 .toSource svg:hover {
-    fill: black;
-    filter: drop-shadow(0px 0px 2px goldenrod);
+    fill: blueviolet;
+    filter: drop-shadow(3px 3px 0px black);
 }
 
 #projectSubheader::before {
