@@ -226,7 +226,16 @@ main.active {
   -webkit-text-fill-color: transparent;
 }
 
+/** MOBILE **/
 @media (max-width: 800px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  .subHeader {
+    font-size: 2em;
+  }
+
   #otherLinks {
     display: none;
     position: absolute;
@@ -235,10 +244,5 @@ main.active {
   #menuSvg {
     display: flex;
     position: relative;
-  }
-
-  .subHeader {
-    white-space: inherit;
-    transition: none;
   }
 }
