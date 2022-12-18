@@ -162,7 +162,7 @@ sometimes a single pixel of background shows right above the navbar */
 #navBar::before {
   content: '';
   background-color: black;
-  position: absolute;
+  position: fixed;
   top: -5px;
   left: 0;
   width: 100%;
