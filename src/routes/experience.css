@@ -8,7 +8,7 @@ h2 {
     margin-bottom: 20px;
     min-width: 300px;
     width: 60%;
-    font-size: x-large;
+    font-size: 2em;
 }
 
 .workCont {
@@ -27,6 +27,7 @@ h2 {
 .workInfoCont {
     background-color: #d9ba6c;
     color: black;
+    min-width: 350px;
     padding: 16px;
     border-radius: 8px;
     text-align: center;
@@ -177,7 +178,12 @@ h2 {
     vertical-align: middle;
 }
 
+/** MOBILE **/
 @media (max-width: 800px) {
+    .bar {
+        font-size: 1.5em;
+    }
+
     .workCont {
         flex-direction: column;
     }
@@ -191,7 +197,7 @@ h2 {
     }
 
     .workInfoCont {
-        margin-right: 0;
+        min-width: 0px;
     }
 
     .revOnMobile {

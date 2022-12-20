@@ -93,6 +93,9 @@ export default function Experience() {
                         <div class="eighty">Python</div>
                     </div>
                     <div class="bar">
+                        <div class="sixty">Go</div>
+                    </div>
+                    <div class="bar">
                         <div class="sixty">C#</div>
                     </div>
                     <div class="bar">

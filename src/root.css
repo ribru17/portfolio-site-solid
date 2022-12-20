@@ -43,6 +43,10 @@ h2 {
   font-size: 3em;
 }
 
+h3 {
+  font-size: 2em;
+}
+
 p {
   font-size: 1.25em;
   font-family: "MabryLite";
@@ -243,6 +247,10 @@ sometimes a single pixel of background shows right above the navbar */
 @media (max-width: 800px) {
   h1 {
     font-size: 4em;
+  }
+
+  h3 {
+    font-size: 1.5em;
   }
 
   .subHeader {
