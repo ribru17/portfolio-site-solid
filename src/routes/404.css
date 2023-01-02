@@ -10,6 +10,10 @@ pre {
     color: #CE9178;
 }
 
+.code-tag {
+    color: #808080;
+}
+
 .code-identifier {
     color: #569CD6;
 }
@@ -22,9 +26,17 @@ pre {
     color: #7CA668;
 }
 
+.code-class {
+    color: #4ec9b0;
+}
+
+.code-bracket {
+    color: #ffd700;
+}
+
 .codeSnippet {
     padding: 3em;
-    background-color: #222;
+    background-color: black;
     border: 3px solid black;
     margin: 2em;
     border-radius: 8px;
@@ -45,14 +57,14 @@ pre {
     }
 }
 
-.cursorLine::after {
-    content: " ";
+.cursorLine {
+    border-right: 2px solid transparent;
     animation: blinkTextCursorBar 1s steps(1) infinite normal both;
 }
 
 @keyframes blinkTextCursorBar {
-    0% { content: " "; }
-    50% { content: "|"; }
+    0% { border-color: white; }
+    50% { border-color: transparent; }
 }
 
 .codeSnippet header {

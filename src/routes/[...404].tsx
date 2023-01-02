@@ -14,11 +14,11 @@ export default function NotFound() {
           <header>
             PageNotFound.tsx
           </header>
-          <pre>&#60;<span class="code-identifier">div</span> <span class="code-property">className</span>=<span class="code-stringLiteral">"pageDiv"</span>&#62;</pre>
-          <pre class="cursorLine">    &#123;<span class="code-comment">&#47;* TODO: implement this page *&#47;</span>&#125;</pre>
-          <pre>&#60;/<span class="code-identifier">div</span>&#62;</pre>
+          <pre><span class="code-tag">&#60;</span><span class="code-identifier">div</span> <span class="code-property">class</span>=<span class="code-stringLiteral">"pageDiv"</span><span class="code-tag">&#62;</span></pre>
+          <pre>    <span class="code-bracket">&#123;</span><span class="code-comment">&#47;* TODO: implement this page *&#47;</span><span class="code-bracket">&#125;</span><span class="cursorLine"></span></pre>
+          <pre><span class="code-tag">&#60;/</span><span class="code-identifier">div</span><span class="code-tag">&#62;</span></pre>
         </div>
       </main>
     </div>
-)
+  )
 }
