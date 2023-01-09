@@ -10,7 +10,7 @@ the server as it is hosted separately on Render.com.
 
 ## Server
 
-The Express server is hosted on Render.com and its repository can be found [here.](https://github.com/ribru17/portfolio-site-backend)
+The Rust backend is hosted on Render.com and its repository can be found [here.](https://github.com/ribru17/portfolio-site-backend-actix)
 For my purposes the server is just a simple endpoint that e-mails me the content of the `Contact` page form.
 
 ## Problems I Encountered and How I Overcame Them

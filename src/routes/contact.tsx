@@ -43,7 +43,7 @@ export default function Contact() {
     const sendMail: JSX.EventHandlerUnion<HTMLFormElement, Event & { submitter: HTMLElement; }> = async (e) => {
         e.preventDefault()
         let fields: ContactForm = (e.target as HTMLFormElement).elements
-        let rootUrl = 'https://portfolio-backend-dig6.onrender.com'
+        let rootUrl = 'https://portfolio-backend-actix.onrender.com'
         let messageName = fields.name?.value || ""
         let messageContent = fields.message?.value || ""
         if (fields.name) {
