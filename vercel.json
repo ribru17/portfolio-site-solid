@@ -1,8 +1,4 @@
 {
-    "routes": [
-        { "handle": "filesystem" },
-        { "src": "/(.*)", "status": 404, "dest": "/index.html" }
-    ],
     "headers": [
         {
             "source": "/_vercel/insights/(.*)",
