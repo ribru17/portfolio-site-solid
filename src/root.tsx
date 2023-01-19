@@ -13,7 +13,7 @@ import {
   Title,
   Link,
 } from "solid-start";
-// import { inject } from "@vercel/analytics/*";
+import { inject } from "@vercel/analytics";
 import DropDown from "./components/DropDown/DropDown";
 import Menu from "./components/SVGs/Menu/Menu";
 import "./root.css";
@@ -37,7 +37,7 @@ export default function Root() {
 
   onMount(() => {
     document.addEventListener('mousedown', handleClickOutside)
-    // inject()
+    inject()
   })
 
   onCleanup(() => {
