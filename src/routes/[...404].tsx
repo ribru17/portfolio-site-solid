@@ -1,16 +1,16 @@
-import { A, Title } from "solid-start";
-import { HttpStatusCode } from "solid-start/server";
-import "./404.css"
+import { A, Title } from 'solid-start';
+import { HttpStatusCode } from 'solid-start/server';
+import './404.css';
 
 export default function NotFound() {
   return (
-    <div class="pageDiv">
-      <main class="active">
+    <div class='pageDiv'>
+      <main class='active'>
         <Title>Page Not Found</Title>
         <HttpStatusCode code={404} />
         <h1>Page not found :(</h1>
-        <A href="/" id="notFoundHomeLink">Return home</A>
-        <div class="codeSnippet">
+        <A href='/' id='notFoundHomeLink'>Return home</A>
+        <div class='codeSnippet'>
           <header>
             PageNotFound.tsx
           </header>
@@ -20,5 +20,5 @@ export default function NotFound() {
         </div>
       </main>
     </div>
-  )
+  );
 }
