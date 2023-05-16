@@ -35,7 +35,9 @@ export default function Projects() {
   return (
     <main class={active() ? 'active' : ''} ref={mainRef}>
       <h1>Projects</h1>
-      <p id='projectSubheader'>an image to show relevant skills</p>
+      {/* Don't let deno fmt remove the leading space */}
+      {/* deno-fmt-ignore */}
+      <p id='projectSubheader'> an image to show relevant skills.</p>
       <div class='projectDiv'>
         <h2 class='projectTitle'>
           Westwordle<a

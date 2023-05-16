@@ -144,17 +144,17 @@ export default function Home() {
         <div class='aboutMe'>
           <h2>About Me</h2>
           <p>
-            I am a full stack developer with 4+ years of experience building
-            websites. I love programming and I have worked on countless
-            projects, both in teams and by myself.
+            I am a full stack developer with 4+ years of experience writing
+            code. I love programming and I have worked on countless projects,
+            both in teams and by myself.
           </p>
         </div>
         <div class='aboutMe'>
           <h2>My Priorities</h2>
           <p>
-            When building a website (or any application), I always make sure
-            that it is performant and simple to navigate. Nobody wants to wait
-            forever or get lost figuring out a website!
+            When building an application, I always make sure that it is
+            performant and simple to navigate. Nobody wants to wait forever for
+            a site to load, or get lost in it once it does!
           </p>
         </div>
       </div>

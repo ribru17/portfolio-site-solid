@@ -74,13 +74,13 @@ export default function Experience() {
         </div>
         <div id='experienceCont'>
           <div class='bar'>
-            <div class='max'>Node.js</div>
-          </div>
-          <div class='bar'>
             <div class='max'>Javascript / Typescript</div>
           </div>
           <div class='bar'>
             <div class='max'>React.js / React Native</div>
+          </div>
+          <div class='bar'>
+            <div class='max'>Node.js</div>
           </div>
           <div class='bar'>
             <div class='max'>HTML + CSS</div>
@@ -92,19 +92,25 @@ export default function Experience() {
             <div class='max'>Git</div>
           </div>
           <div class='bar'>
+            <div class='max'>Python</div>
+          </div>
+          <div class='bar'>
             <div class='max'>C / C++</div>
           </div>
           <div class='bar'>
             <div class='eighty'>Rust</div>
           </div>
           <div class='bar'>
-            <div class='eighty'>Python</div>
+            <div class='eighty'>Lua</div>
           </div>
           <div class='bar'>
-            <div class='sixty'>Go</div>
+            <div class='sixty'>Haskell</div>
           </div>
           <div class='bar'>
             <div class='sixty'>C#</div>
+          </div>
+          <div class='bar'>
+            <div class='sixty'>Go</div>
           </div>
           <div class='bar'>
             <div class='sixty'>R</div>
