@@ -12,6 +12,10 @@ body {
   color: white;
 }
 
+h1 {
+  font-family: "Brutal" !important;
+}
+
 @font-face {
   font-family: "Brutal";
   src: url("./fonts/Bebas-Regular.ttf") format("truetype");
