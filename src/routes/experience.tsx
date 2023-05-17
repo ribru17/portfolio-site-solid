@@ -28,7 +28,7 @@ export default function Experience() {
   });
 
   return (
-    <main class={active() ? 'active' : ''} ref={mainRef}>
+    <main id='experience' class={active() ? 'active' : ''} ref={mainRef}>
       <h1>Experience</h1>
       <div class='largeBlock' id='experienceBody'>
         <h2 style={{ 'margin-top': 0 }}>Employment Experience</h2>

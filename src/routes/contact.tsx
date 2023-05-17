@@ -71,7 +71,7 @@ export default function Contact() {
   };
 
   return (
-    <main class={active() ? 'active' : ''} ref={mainRef}>
+    <main id='contact' class={active() ? 'active' : ''} ref={mainRef}>
       <h1>Contact</h1>
       <div id='contactInvite'>
         <div id='logoCont'>

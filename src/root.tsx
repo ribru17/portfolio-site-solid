@@ -37,6 +37,33 @@ export default function Root() {
     }
   }
 
+  // override regular hash link functionality so that the `onscroll` event still fires
+  function overrideHashLink(e: MouseEvent) {
+    e.preventDefault();
+
+    // extract link text after '/#'
+    const targetId = (e.target as HTMLAnchorElement).getAttribute('href')
+      ?.substring(2);
+
+    // deprecate '/experience', '/contact', etc.
+    if (window.location.pathname !== '/') {
+      window.location.href = '/';
+    }
+
+    // no element, scroll to top
+    if (!targetId) {
+      window.scrollTo(0, 0);
+    } else {
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const offsetTop = targetElement.offsetTop;
+
+        window.scrollTo(0, offsetTop);
+      }
+    }
+  }
+
   onMount(() => {
     document.addEventListener('mousedown', handleClickOutside);
     inject();
@@ -112,7 +139,19 @@ export default function Root() {
         <Suspense>
           <ErrorBoundary>
             <div id='navBar'>
-              <A href='/' id='nameLink'>
+              <A
+                href='/'
+                id='nameLink'
+                onClick={() => {
+                  // keeping this link as a regular (non-hash) link to keep
+                  // intended behavior of going to home page if on, say, the
+                  // "experience" page
+
+                  // still additionally scrolling to the top gets the best of
+                  // both worlds
+                  window.scrollTo(0, 0);
+                }}
+              >
                 RILEY BRUINS<img
                   class='logo'
                   src='logo192.png'
@@ -123,9 +162,9 @@ export default function Root() {
                 </img>
               </A>
               <div id='otherLinks'>
-                <A href='/experience'>Experience</A>
-                <A href='/projects'>Projects</A>
-                <A href='/contact'>Contact</A>
+                <A href='/#experience' onClick={overrideHashLink}>Experience</A>
+                <A href='/#projects' onClick={overrideHashLink}>Projects</A>
+                <A href='/#contact' onClick={overrideHashLink}>Contact</A>
                 <A
                   href='https://rb-portfolio-site.vercel.app/resume.pdf'
                   target='_blank'

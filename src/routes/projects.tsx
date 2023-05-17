@@ -33,7 +33,7 @@ export default function Projects() {
   });
 
   return (
-    <main class={active() ? 'active' : ''} ref={mainRef}>
+    <main id='projects' class={active() ? 'active' : ''} ref={mainRef}>
       <h1>Projects</h1>
       {/* Don't let deno fmt remove the leading space */}
       {/* deno-fmt-ignore */}
