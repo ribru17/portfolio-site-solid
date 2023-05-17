@@ -140,17 +140,9 @@ export default function Root() {
           <ErrorBoundary>
             <div id='navBar'>
               <A
-                href='/'
+                href='/#'
                 id='nameLink'
-                onClick={() => {
-                  // keeping this link as a regular (non-hash) link to keep
-                  // intended behavior of going to home page if on, say, the
-                  // "experience" page
-
-                  // still additionally scrolling to the top gets the best of
-                  // both worlds
-                  window.scrollTo(0, 0);
-                }}
+                onClick={overrideHashLink}
               >
                 RILEY BRUINS<img
                   class='logo'
