@@ -13,9 +13,9 @@ import {
   TorusGeometry,
   WebGLRenderer,
 } from '../utils/three';
-import Experience from './experience';
-import Projects from './projects';
-import Contact from './contact';
+import Experience from '../components/Pages/experience';
+import Projects from '../components/Pages/projects';
+import Contact from '../components/Pages/contact';
 import './index.css';
 
 export default function Home() {

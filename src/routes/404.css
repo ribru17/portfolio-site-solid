@@ -1,95 +1,99 @@
 pre {
-    font-size: large;
-    margin: 0;
-    overflow: hidden;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+  font-size: large;
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .code-stringLiteral {
-    color: #CE9178;
+  color: #ce9178;
 }
 
 .code-tag {
-    color: #808080;
+  color: #808080;
 }
 
 .code-identifier {
-    color: #569CD6;
+  color: #569cd6;
 }
 
 .code-property {
-    color: #9CDCFE;
+  color: #9cdcfe;
 }
 
 .code-comment {
-    color: #7CA668;
+  color: #7ca668;
 }
 
 .code-class {
-    color: #4ec9b0;
+  color: #4ec9b0;
 }
 
 .code-bracket {
-    color: #ffd700;
+  color: #ffd700;
 }
 
 .codeSnippet {
-    padding: 3em;
-    background-color: #141414;
-    border: 3px solid black;
-    margin: 2em;
-    border-radius: 8px;
-    font-size: large;
-    text-align: left;
-    counter-reset: line;
+  padding: 3em;
+  background-color: #141414;
+  border: 3px solid black;
+  margin: 2em;
+  border-radius: 8px;
+  font-size: large;
+  text-align: left;
+  counter-reset: line;
 }
 
 @media (max-width: 800px) {
-    .codeSnippet {
-        width: 350px;
-        box-sizing: border-box;
-    }
+  .codeSnippet {
+    width: 350px;
+    box-sizing: border-box;
+  }
 
-    pre {
-        text-indent: -3ch;
-        padding-left: 3ch;
-    }
+  pre {
+    text-indent: -3ch;
+    padding-left: 3ch;
+  }
 }
 
 .cursorLine {
-    border-right: 2px solid transparent;
-    animation: blinkTextCursorBar 1s steps(1) infinite normal both;
+  border-right: 2px solid transparent;
+  animation: blinkTextCursorBar 1s steps(1) infinite normal both;
 }
 
 @keyframes blinkTextCursorBar {
-    0% { border-color: white; }
-    50% { border-color: transparent; }
+  0% {
+    border-color: white;
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .codeSnippet header {
-    color: gray;
-    font-family: monospace;
-    font-size: x-large;
-    margin-bottom: 1em;
+  color: gray;
+  font-family: monospace;
+  font-size: x-large;
+  margin-bottom: 1em;
 }
 
 .codeSnippet pre::before {
-    counter-increment: line;
-    content: counter(line);
-    margin-right: 1ch;
-    padding-right: 1ch;
-    border-right: 1px solid white;
+  counter-increment: line;
+  content: counter(line);
+  margin-right: 1ch;
+  padding-right: 1ch;
+  border-right: 1px solid white;
 }
 
 #notFoundHomeLink {
-    color: white;
-    transition: all 0.3s;
-    box-shadow: 0 2px white;
-    font-size: x-large;
+  color: white;
+  transition: all 0.3s;
+  box-shadow: 0 2px white;
+  font-size: x-large;
 }
 
 #notFoundHomeLink:hover {
-    color: goldenrod;
-    box-shadow: 0 0px white;
+  color: goldenrod;
+  box-shadow: 0 2px transparent;
 }
