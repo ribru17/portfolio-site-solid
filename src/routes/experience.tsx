@@ -32,7 +32,16 @@ export default function Experience() {
       <h1>Experience</h1>
       <div class='largeBlock' id='experienceBody'>
         <h2 style={{ 'margin-top': 0 }}>Employment Experience</h2>
-        <div class='flex'>
+        <div id='employmentExperienceCont'>
+          <div class='workCont'>
+            <div class='workInfoCont'>
+              <h3>SWE Intern at Google (incoming)</h3>
+              <h3 class='timeWorked'>June 2023 - September 2023</h3>
+            </div>
+            <p class='workText'>
+              Working in Mountain View, CA.
+            </p>
+          </div>
           <div class='workCont'>
             <div class='workInfoCont'>
               <h3>AI Model Trainer at Surge AI</h3>
