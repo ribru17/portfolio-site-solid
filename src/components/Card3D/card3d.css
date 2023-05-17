@@ -4,17 +4,19 @@
   min-width: 350px;
   width: 50vw;
   border-radius: 10px;
-  transition: transform 0.5s ease-in-out, box-shadow 0.4s ease, margin-top 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, box-shadow 0.4s ease,
+    margin-top 0.5s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transform-style: preserve-3d;
-  /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
   border: 3px solid black;
   box-sizing: content-box;
 }
-.card h2, .card h3, .card P {
+.card h2,
+.card h3,
+.card P {
   transform: translateZ(2px);
   color: white;
   font-size: 40px;
@@ -56,20 +58,16 @@
 }
 
 .background:hover .card {
-  /* box-shadow: 0px 0px 5px 2px darkgoldenrod; */
-  /* box-shadow: 8px 8px 0px black, -8px -8px 0px #d9ba6c; */
   box-shadow: 8px 8px 0px black, -8px -8px 0px blueviolet;
-  /* box-shadow: 8px 8px 0px black, -8px -8px 0px black; */
 }
 .background.details:hover .card {
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-  /* box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.75); */
   box-shadow: none;
 }
 
 .card .photo:after {
   position: absolute;
-  content: ' ';
+  content: " ";
   display: block;
   top: 0;
   right: 0;
@@ -83,19 +81,17 @@
   height: 1px;
   transform: translateX(0px) rotateX(-90deg) rotateY(0deg);
   transform-origin: 100% 100%;
-  transition: height 0.5s ease-in-out, margin 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out, margin 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
   transform-style: preserve-3d;
   top: 50px;
-
   margin: 10px;
   width: 25px;
   position: relative;
-  /* background: linear-gradient(darkgoldenrod, darkgoldenrod, rgba(0, 0, 0, 0)); */
-  /* background: linear-gradient(black, rgba(0, 0, 0, 0)); */
 }
 .card .card-bar:after {
   display: block;
-  content: '';
+  content: "";
   height: 100%;
   position: absolute;
   top: 0;
@@ -105,9 +101,9 @@
   transform-origin: 0% 50%;
 }
 .card .card-bar:before {
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -124,37 +120,34 @@
   transition: background-color 0.3s ease-in-out;
 }
 .card .card-bar.card-bar1:before {
-  content: '';
+  content: "";
 }
 .card .card-bar.card-bar2:before {
-  content: '';
+  content: "";
 }
 .card .card-bar.card-bar3:before {
-  content: '';
+  content: "";
 }
 .card .card-bar.card-bar4:before {
-  content: '';
+  content: "";
 }
 .card .card-bar.card-bar5:before {
-  content: '';
+  content: "";
 }
 .card .card-bar.card-bar6:before {
-  content: '';
+  content: "";
 }
 .card .card-bar.card-bar7:before {
-  content: '';
+  content: "";
 }
 .card .card-bar span {
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   position: absolute;
-  /* transform: rotateZ(0deg); */
   border-radius: 4px;
   transform-origin: 0% 100%;
-  /* top: 20px; */
   margin-top: -20px;
   white-space: nowrap;
   text-align: center;
-  /* left: 18px; */
   padding: 5px;
   color: black;
   font-size: 10px;
@@ -165,7 +158,6 @@
 }
 .details .card {
   transform: rotateX(60deg) translateY(150px) translateZ(100px);
-  /* box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.75); */
 }
 .details .card .chart {
   transform: translateZ(40px) translatey(50px);
@@ -212,7 +204,6 @@
   opacity: 1;
   transition-delay: 0.3s;
   color: black;
-  /* background-color: darkgoldenrod; */
   background-color: #d9ba6c;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
@@ -220,7 +211,7 @@
   backface-visibility: hidden;
 }
 .details .card .card-bar:before {
-  color: rgba(0, 0 ,0, 0);
+  color: rgba(0, 0, 0, 0);
   background-color: transparent;
   transition-delay: 0s;
 }
@@ -251,7 +242,8 @@
   transition: margin-top 0.5s ease-in-out;
   margin-top: 0px;
 }
-.background:before, .background:after {
+.background:before,
+.background:after {
   position: absolute;
   content: " ";
   top: 0;

@@ -1,61 +1,60 @@
 canvas {
-    top: 0;
-    left: 0;
-    position: fixed;
-    min-height: 900px;
-    z-index: -99;
+  top: 0;
+  left: 0;
+  position: fixed;
+  min-height: 900px;
+  z-index: -99;
 }
 
 #aboutMeCont {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    color: black;
-    
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: black;
 }
 
 .aboutMe {
-    padding: 0px 16px;
-    margin: 16px;
-    width: 25%;
-    min-width: 300px;
-    text-align: left;
-    background-color: #d9ba6c;
-    border-radius: 8px;
-    border: 3px solid black;
-    box-shadow: 8px 8px 0px black;
+  padding: 0px 16px;
+  margin: 16px;
+  width: 25%;
+  min-width: 300px;
+  text-align: left;
+  background-color: #d9ba6c;
+  border-radius: 8px;
+  border: 3px solid black;
+  box-shadow: 8px 8px 0px black;
 }
 
 .aboutMe p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .aboutMe h2 {
-    font-size: 2em;
-    text-align: center;
+  font-size: 2em;
+  text-align: center;
 }
 
 @media (max-width: 800px) {
-    #aboutMeCont {
-        flex-direction: column;
-        align-items: center;
-    }
+  #aboutMeCont {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    #aboutMeDivider {
-        display: none;
-    }
+  #aboutMeDivider {
+    display: none;
+  }
 
-    .aboutMe {
-        margin: 0;
-        font-size: 1em;
-        margin-top: 16px;
-    }
+  .aboutMe {
+    margin: 0;
+    font-size: 1em;
+    margin-top: 16px;
+  }
 
-    .aboutMe p {
-        font-size: 1.25em;
-    }
+  .aboutMe p {
+    font-size: 1.25em;
+  }
 
-    .aboutMe h2 {
-        font-size: 1.75em;
-    }
+  .aboutMe h2 {
+    font-size: 1.75em;
+  }
 }
