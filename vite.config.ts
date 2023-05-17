@@ -7,11 +7,7 @@ export default defineConfig({
   plugins: [
     solid({
       ssr: true,
-      adapter: vercel({
-        prerender: {
-          expiration: 60,
-        },
-      }),
+      adapter: vercel({ prerender: { expiration: 60 } }),
     }),
     // Unfonts(),
   ],
