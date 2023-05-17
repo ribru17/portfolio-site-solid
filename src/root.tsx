@@ -17,7 +17,6 @@ import { inject } from '@vercel/analytics';
 import DropDown from './components/DropDown/DropDown';
 import Menu from './components/SVGs/Menu/Menu';
 import './root.css';
-// import 'unfonts.css';
 import { isServer } from 'solid-js/web';
 
 export default function Root() {
