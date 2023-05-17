@@ -17,6 +17,8 @@ import { inject } from '@vercel/analytics';
 import DropDown from './components/DropDown/DropDown';
 import Menu from './components/SVGs/Menu/Menu';
 import './root.css';
+// import 'unfonts.css';
+import { isServer } from 'solid-js/web';
 
 export default function Root() {
   const [isOpen, setIsOpen] = createSignal(false);
@@ -54,6 +56,7 @@ export default function Root() {
     if (!targetId) {
       window.scrollTo(0, 0);
     } else {
+      if (isServer) return;
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
@@ -65,12 +68,16 @@ export default function Root() {
   }
 
   onMount(() => {
-    document.addEventListener('mousedown', handleClickOutside);
     inject();
+    if (!isServer) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
   });
 
   onCleanup(() => {
-    document.removeEventListener('mousedown', handleClickOutside);
+    if (!isServer) {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
   });
 
   return (

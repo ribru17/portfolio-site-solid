@@ -8,18 +8,20 @@
   "type": "module",
   "devDependencies": {
     "@types/three": "^0.146.0",
-    "solid-start-node": "^0.2.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.8"
+    "solid-start-node": "^0.2.19",
+    "solid-start-vercel": "^0.2.26",
+    "typescript": "^4.9.4",
+    "unplugin-fonts": "^1.0.3",
+    "vite": "^4.1.4"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.0",
-    "@solidjs/router": "^0.5.0",
+    "@solidjs/meta": "^0.28.2",
+    "@solidjs/router": "^0.8.2",
     "@vercel/analytics": "^0.1.8",
-    "solid-js": "^1.6.2",
-    "solid-start": "^0.2.0",
+    "solid-js": "^1.7.2",
+    "solid-start": "^0.2.26",
     "three": "^0.147.0",
-    "undici": "^5.11.0"
+    "undici": "^5.15.1"
   },
   "engines": {
     "node": ">=16"
