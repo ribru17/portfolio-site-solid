@@ -36,103 +36,102 @@ export default function Home() {
   let renderer: WebGLRenderer;
 
   onMount(() => {
-    if (window) {
-      window.addEventListener('scroll', handleScroll);
-      window.addEventListener('resize', onResize);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', onResize);
 
-      const scene = new Scene();
-      const camera = new PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000,
-      );
-      renderer = new WebGLRenderer();
-      renderer.setClearAlpha(0);
+    const scene = new Scene();
+    const camera = new PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000,
+    );
+    renderer = new WebGLRenderer();
+    renderer.setClearAlpha(0);
 
-      const geometry = new BoxGeometry(1, 1, 1);
-      const material = new MeshPhongMaterial({ color: 'slateblue' });
-      const cube = new Mesh(geometry, material);
+    const geometry = new BoxGeometry(1, 1, 1);
+    const material = new MeshPhongMaterial({ color: 'slateblue' });
+    const cube = new Mesh(geometry, material);
+    cube.position.x = -0.5 - window.innerWidth / 600;
+
+    scene.add(cube);
+    camera.position.z = 5;
+
+    const torusGeoFive = new TorusGeometry(1, 0.1, 16, 5);
+    const torusFive = new Mesh(torusGeoFive, material);
+    torusFive.position.x = window.innerWidth / 400;
+    torusFive.rotation.y = Math.PI / 3;
+
+    scene.add(torusFive);
+
+    const torusGeoFour = new TorusGeometry(1, 0.1, 16, 4);
+    const torusFour = new Mesh(torusGeoFour, material);
+    torusFour.position.x = window.innerWidth / 400;
+    torusFour.scale.set(0.5, 0.5, 0.5);
+    torusFour.rotation.y = Math.PI / 2;
+    torusFour.rotation.x = Math.PI / 3;
+
+    scene.add(torusFour);
+
+    const torusGeoThree = new TorusGeometry(1, 0.1, 16, 3);
+    const torusThree = new Mesh(torusGeoThree, material);
+    torusThree.position.x = window.innerWidth / 400;
+    torusThree.scale.set(0.25, 0.25, 0.25);
+    torusThree.rotation.x = 2 * Math.PI / 3;
+
+    scene.add(torusThree);
+
+    const ambient = new AmbientLight(0xffffff, 0.5);
+    const spot = new SpotLight(0xffffff, 0.5, 0, 0.15, 1);
+    spot.position.set(10, 10, 10);
+    const point = new PointLight(0xffffff, 0.5);
+    point.position.set(5, 10, 10);
+
+    scene.add(ambient);
+    scene.add(spot);
+    scene.add(point);
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    onResize = function () {
       cube.position.x = -0.5 - window.innerWidth / 600;
-
-      scene.add(cube);
-      camera.position.z = 5;
-
-      const torusGeoFive = new TorusGeometry(1, 0.1, 16, 5);
-      const torusFive = new Mesh(torusGeoFive, material);
       torusFive.position.x = window.innerWidth / 400;
-      torusFive.rotation.y = Math.PI / 3;
-
-      scene.add(torusFive);
-
-      const torusGeoFour = new TorusGeometry(1, 0.1, 16, 4);
-      const torusFour = new Mesh(torusGeoFour, material);
       torusFour.position.x = window.innerWidth / 400;
-      torusFour.scale.set(0.5, 0.5, 0.5);
-      torusFour.rotation.y = Math.PI / 2;
-      torusFour.rotation.x = Math.PI / 3;
-
-      scene.add(torusFour);
-
-      const torusGeoThree = new TorusGeometry(1, 0.1, 16, 3);
-      const torusThree = new Mesh(torusGeoThree, material);
       torusThree.position.x = window.innerWidth / 400;
-      torusThree.scale.set(0.25, 0.25, 0.25);
-      torusThree.rotation.x = 2 * Math.PI / 3;
+      camera.aspect = window.innerWidth / Math.max(900, window.innerHeight);
+      camera.updateProjectionMatrix();
 
-      scene.add(torusThree);
+      renderer.setSize(window.innerWidth, Math.max(900, window.innerHeight));
+    };
+    onResize();
 
-      const ambient = new AmbientLight(0xffffff, 0.5);
-      const spot = new SpotLight(0xffffff, 0.5, 0, 0.15, 1);
-      spot.position.set(10, 10, 10);
-      const point = new PointLight(0xffffff, 0.5);
-      point.position.set(5, 10, 10);
+    frame = requestAnimationFrame(function loop() {
+      frame = requestAnimationFrame(loop);
 
-      scene.add(ambient);
-      scene.add(spot);
-      scene.add(point);
+      const ROTATION_FACTOR = clock.getDelta() * 20;
 
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
+      cube.rotation.x += 0.01 * ROTATION_FACTOR;
+      cube.position.y = lerp(-2.5, 0.5, scrollPercent());
+      cube.position.z = lerp(6, 1, scrollPercent());
 
-      onResize = function () {
-        cube.position.x = -0.5 - window.innerWidth / 600;
-        torusFive.position.x = window.innerWidth / 400;
-        torusFour.position.x = window.innerWidth / 400;
-        torusThree.position.x = window.innerWidth / 400;
-        camera.aspect = window.innerWidth / Math.max(900, window.innerHeight);
-        camera.updateProjectionMatrix();
+      torusFive.rotation.y += 0.008 * ROTATION_FACTOR;
+      torusFive.rotation.z += 0.01 * ROTATION_FACTOR;
+      torusFour.rotation.y += 0.008 * ROTATION_FACTOR;
+      torusFour.rotation.z += 0.01 * ROTATION_FACTOR;
+      torusThree.rotation.y += 0.008 * ROTATION_FACTOR;
+      torusThree.rotation.z += 0.01 * ROTATION_FACTOR;
 
-        renderer.setSize(window.innerWidth, Math.max(900, window.innerHeight));
-      };
-      onResize();
+      torusFive.position.y = lerp(0.25, 2, scrollPercent());
+      torusFive.position.z = lerp(0, 5, scrollPercent());
+      torusFour.position.y = lerp(0.25, 2, scrollPercent());
+      torusFour.position.z = lerp(0, 5, scrollPercent());
+      torusThree.position.y = lerp(0.25, 2, scrollPercent());
+      torusThree.position.z = lerp(0, 5, scrollPercent());
 
-      frame = requestAnimationFrame(function loop() {
-        frame = requestAnimationFrame(loop);
-
-        const ROTATION_FACTOR = clock.getDelta() * 20;
-
-        cube.rotation.x += 0.01 * ROTATION_FACTOR;
-        cube.position.y = lerp(-2.5, 0.5, scrollPercent());
-        cube.position.z = lerp(6, 1, scrollPercent());
-
-        torusFive.rotation.y += 0.008 * ROTATION_FACTOR;
-        torusFive.rotation.z += 0.01 * ROTATION_FACTOR;
-        torusFour.rotation.y += 0.008 * ROTATION_FACTOR;
-        torusFour.rotation.z += 0.01 * ROTATION_FACTOR;
-        torusThree.rotation.y += 0.008 * ROTATION_FACTOR;
-        torusThree.rotation.z += 0.01 * ROTATION_FACTOR;
-
-        torusFive.position.y = lerp(0.25, 2, scrollPercent());
-        torusFive.position.z = lerp(0, 5, scrollPercent());
-        torusFour.position.y = lerp(0.25, 2, scrollPercent());
-        torusFour.position.z = lerp(0, 5, scrollPercent());
-        torusThree.position.y = lerp(0.25, 2, scrollPercent());
-        torusThree.position.z = lerp(0, 5, scrollPercent());
-
-        renderer.render(scene, camera);
-      });
-    }
+      renderer.render(scene, camera);
+    });
   });
 
   onCleanup(() => {

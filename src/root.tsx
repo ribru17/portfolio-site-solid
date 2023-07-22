@@ -56,6 +56,7 @@ export default function Root() {
       window.scrollTo(0, 0);
     } else {
       if (isServer) return;
+
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
