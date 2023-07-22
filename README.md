@@ -34,3 +34,5 @@ the server is just a simple endpoint that e-mails me the content of the
   error page
   - Had to reroute the `404` page back to `index.html` using `vercel.json` where
     the custom `404` was properly displayed
+- Dev server not running properly, or at all
+  - Disable ad blocker for localhost sites

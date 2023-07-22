@@ -35,11 +35,14 @@ export default function Experience() {
         <div id='employmentExperienceCont'>
           <div class='workCont'>
             <div class='workInfoCont'>
-              <h3>SWE Intern at Google (incoming)</h3>
+              <h3>SWE Intern at Google</h3>
               <h3 class='timeWorked'>June 2023 - September 2023</h3>
             </div>
             <p class='workText'>
-              Working in Mountain View, CA.
+              Here I worked on the Youtube team as a full stack developer,
+              writing backend code in C++ and frontend code in Typescript using
+              the Lit framework. I was responsible for adding an OCR transcript
+              to videos being processed by Youtube's review tool.
             </p>
           </div>
           <div class='workCont'>
@@ -60,10 +63,10 @@ export default function Experience() {
           <div class='workCont spaceBottom revOnMobile'>
             <div id='experienceTextCont'>
               <p id='experienceText'>
-                I mostly use Express with Node for my backends and favor React
-                as my frontend framework. This website, however, is built with
-                SolidJS and Typescript with a Rust (Actix Web) backend! Feel
-                free to{' '}
+                I am experienced using many popular frameworks and libraries,
+                like React and Express for example. This website, however, is
+                built with SolidJS and Typescript, with a Rust (Actix Web)
+                backend! Feel free to{' '}
                 <a
                   class='inlineLink'
                   target='_blank'
@@ -107,10 +110,10 @@ export default function Experience() {
             <div class='max'>C / C++</div>
           </div>
           <div class='bar'>
-            <div class='eighty'>Rust</div>
+            <div class='eighty'>Lua</div>
           </div>
           <div class='bar'>
-            <div class='eighty'>Lua</div>
+            <div class='eighty'>Rust</div>
           </div>
           <div class='bar'>
             <div class='sixty'>Haskell</div>

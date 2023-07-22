@@ -119,27 +119,6 @@
   transition-delay: 0.3s;
   transition: background-color 0.3s ease-in-out;
 }
-.card .card-bar.card-bar1:before {
-  content: "";
-}
-.card .card-bar.card-bar2:before {
-  content: "";
-}
-.card .card-bar.card-bar3:before {
-  content: "";
-}
-.card .card-bar.card-bar4:before {
-  content: "";
-}
-.card .card-bar.card-bar5:before {
-  content: "";
-}
-.card .card-bar.card-bar6:before {
-  content: "";
-}
-.card .card-bar.card-bar7:before {
-  content: "";
-}
 .card .card-bar span {
   font-family: "Oxygen", sans-serif;
   position: absolute;
@@ -164,41 +143,9 @@
 }
 .details .card .card-bar {
   transform: translateX(0px) rotateX(-90deg) rotateY(0deg);
-}
-.details .card .card-bar.card-bar1 {
-  height: 150px;
-  transition-delay: 0.3s;
-  margin-top: -150px;
-}
-.details .card .card-bar.card-bar2 {
   height: 100px;
   transition-delay: 0.3s;
   margin-top: -100px;
-}
-.details .card .card-bar.card-bar3 {
-  height: 75px;
-  transition-delay: 0.2s;
-  margin-top: -75px;
-}
-.details .card .card-bar.card-bar4 {
-  height: 180px;
-  transition-delay: 0s;
-  margin-top: -180px;
-}
-.details .card .card-bar.card-bar5 {
-  height: 52.5px;
-  transition-delay: 0.1s;
-  margin-top: -52.5px;
-}
-.details .card .card-bar.card-bar6 {
-  height: 52.5px;
-  transition-delay: 0.2s;
-  margin-top: -52.5px;
-}
-.details .card .card-bar.card-bar7 {
-  height: 75px;
-  transition-delay: 0.3s;
-  margin-top: -75px;
 }
 .details .card .card-bar span {
   opacity: 1;

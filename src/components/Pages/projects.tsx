@@ -35,9 +35,7 @@ export default function Projects() {
   return (
     <main id='projects' class={active() ? 'active' : ''} ref={mainRef}>
       <h1>Projects</h1>
-      {/* Don't let deno fmt remove the leading space */}
-      {/* deno-fmt-ignore */}
-      <p id='projectSubheader'> an image to show relevant skills.</p>
+      <p id='projectSubheader'>{' '}an image to show relevant skills.</p>
       <div class='projectDiv'>
         <h2 class='projectTitle'>
           Westwordle<a
@@ -105,10 +103,10 @@ export default function Projects() {
           </a>
         </h2>
         <Card3D photo={Chordeographer} aspectRatio='1.5'>
-          <div class='card-bar card-bar2'>
+          <div class='card-bar'>
             <span>JS</span>
           </div>
-          <div class='card-bar card-bar2'>
+          <div class='card-bar'>
             <span>React Native</span>
           </div>
         </Card3D>
