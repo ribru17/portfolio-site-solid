@@ -3,6 +3,7 @@ import Github from '~/components/SVGs/Github/Github';
 import WurdGIF from '~/assets/wurdpreviewcropped.gif';
 import Westwordle from '~/assets/westwordle.jpg';
 import Chordeographer from '~/assets/chordeographerpreview.jpg';
+import Bamboo from '~/assets/bamboomdshowcase.png';
 import Card3D from '~/components/Card3D/Card3D';
 import './projects.css';
 
@@ -38,6 +39,32 @@ export default function Projects() {
       <p id='projectSubheader'>{' '}an image to show relevant skills.</p>
       <div class='projectDiv'>
         <h2 class='projectTitle'>
+          bamboo.nvim<a
+            class='toSource'
+            rel='noreferrer'
+            target='_blank'
+            href='https://github.com/ribru17/bamboo.nvim'
+          >
+            <Github />
+          </a>
+        </h2>
+        <Card3D photo={Bamboo} aspectRatio='1.8'>
+          <div class='card-bar'>
+            <span>Lua</span>
+          </div>
+          <div class='card-bar'>
+            <span>Tree-sitter</span>
+          </div>
+        </Card3D>
+        <div class='descDiv'>
+          <p>
+            This is a color scheme I made for Neovim, designed to reduce eye
+            strain. It currently has over 100 stars on Github.
+          </p>
+        </div>
+      </div>
+      <div class='projectDiv'>
+        <h2 class='projectTitle'>
           Westwordle<a
             class='toSource'
             rel='noreferrer'
@@ -48,10 +75,10 @@ export default function Projects() {
           </a>
         </h2>
         <Card3D photo={Westwordle} aspectRatio='1.5'>
-          <div class='card-bar card-bar2'>
+          <div class='card-bar'>
             <span>React</span>
           </div>
-          <div class='card-bar card-bar2'>
+          <div class='card-bar'>
             <span>Typescript</span>
           </div>
         </Card3D>
@@ -74,10 +101,10 @@ export default function Projects() {
           </a>
         </h2>
         <Card3D photo={WurdGIF} aspectRatio='1.8'>
-          <div class='card-bar card-bar2'>
+          <div class='card-bar'>
             <span>C++</span>
           </div>
-          <div class='card-bar card-bar2'>
+          <div class='card-bar'>
             <span>OOP</span>
           </div>
         </Card3D>
