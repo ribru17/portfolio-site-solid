@@ -110,6 +110,12 @@ export default function Experience() {
             <div class='max'>C / C++</div>
           </div>
           <div class='bar'>
+            <div class='max'>(Neo)vim</div>
+          </div>
+          <div class='bar'>
+            <div class='max'>Markdown</div>
+          </div>
+          <div class='bar'>
             <div class='eighty'>Lua</div>
           </div>
           <div class='bar'>
@@ -120,6 +126,9 @@ export default function Experience() {
           </div>
           <div class='bar'>
             <div class='sixty'>C#</div>
+          </div>
+          <div class='bar'>
+            <div class='sixty'>Unity</div>
           </div>
           <div class='bar'>
             <div class='sixty'>Go</div>
