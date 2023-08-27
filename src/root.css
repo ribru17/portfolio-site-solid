@@ -153,7 +153,12 @@ main.active {
   width: 100%;
   height: 75px;
   box-sizing: border-box;
-  background-color: black;
+  /*
+  This must be used instead of setting a black background due to a really
+  weird and stupid Chromium issue which causes the project card floating details
+  to be hidden under an invisible bar at a certain height. Firefox works fine...
+  */
+  backdrop-filter: brightness(0);
   position: fixed;
   justify-content: space-between;
   align-items: center;

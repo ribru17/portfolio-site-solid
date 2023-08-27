@@ -42,7 +42,10 @@ export default function Experience() {
               Here I worked on the Youtube team as a full stack developer,
               writing backend code in C++ and frontend code in Typescript using
               the Lit framework. I was responsible for adding an OCR transcript
-              to videos being processed by Youtube's review tool.
+              to videos being processed by Youtube's review tool. The transcript
+              displays all text overlays in the video along with the times they
+              are on-screen. The transcript detects words in any language, with
+              the option of translating them into English.
             </p>
           </div>
           <div class='workCont'>
