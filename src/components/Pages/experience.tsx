@@ -95,16 +95,7 @@ export default function Experience() {
             <div class='max'>React.js / React Native</div>
           </div>
           <div class='bar'>
-            <div class='max'>Node.js</div>
-          </div>
-          <div class='bar'>
             <div class='max'>HTML + CSS</div>
-          </div>
-          <div class='bar'>
-            <div class='max'>MongoDB</div>
-          </div>
-          <div class='bar'>
-            <div class='max'>Git</div>
           </div>
           <div class='bar'>
             <div class='max'>Python</div>
@@ -113,13 +104,16 @@ export default function Experience() {
             <div class='max'>C / C++</div>
           </div>
           <div class='bar'>
-            <div class='max'>(Neo)vim</div>
+            <div class='max'>Lua</div>
           </div>
           <div class='bar'>
             <div class='max'>Markdown</div>
           </div>
           <div class='bar'>
-            <div class='eighty'>Lua</div>
+            <div class='max'>(Neo)vim</div>
+          </div>
+          <div class='bar'>
+            <div class='max'>Git</div>
           </div>
           <div class='bar'>
             <div class='eighty'>Rust</div>
