@@ -149,7 +149,7 @@ export default function Home() {
         <div class='aboutMe'>
           <h2>About Me</h2>
           <p>
-            I am a full stack developer with 4+ years of experience writing
+            I am a full stack developer with 5+ years of experience writing
             code. I love programming and I have worked on countless projects,
             both in teams and by myself.
           </p>

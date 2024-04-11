@@ -119,6 +119,9 @@ export default function Experience() {
             <div class='eighty'>Rust</div>
           </div>
           <div class='bar'>
+            <div class='sixty'>Nix</div>
+          </div>
+          <div class='bar'>
             <div class='sixty'>Haskell</div>
           </div>
           <div class='bar'>
